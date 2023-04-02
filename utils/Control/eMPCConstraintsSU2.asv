@@ -1,0 +1,8 @@
+function [A, b] = eMPCConstraintsSU2(Xd,inputArg2)
+%EMPCCONSTRAINTSSU2 Computes the matrix Ak, bk in the constraint for the discretized MPC problem. 
+
+% Compute \xi{d,k}, which are the Lie algebra elements for the desired
+% trajectory. Indeed, \xi{d,k} = i*H = i*h\dot\sigma
+outputArg2 = inputArg2;
+end
+
