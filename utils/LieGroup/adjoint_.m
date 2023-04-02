@@ -1,3 +1,3 @@
-function adh = adjoint_(h)
-adx = -2*skew(h);
+function ad = adjoint_(h)
+ad = -2*skew(h);
 end
