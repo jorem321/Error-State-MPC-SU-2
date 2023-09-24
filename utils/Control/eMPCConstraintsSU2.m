@@ -7,6 +7,6 @@ function A = eMPCConstraintsSU2(hd,dt)
 % Compute \xi{d,k}, which are the Lie algebra elements for the desired
 % trajectory. Indeed, \xi{d,k} = i*H = h^
 % xi_dk = SU2hat(hd); CHECK
-A = dt*adjoint_(hd) + eye(3);
+A = dt*SU2adjoint(hd) + eye(3);
 end
 

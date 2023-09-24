@@ -1,4 +1,4 @@
-function AdU = AdjointMat(U)
+function AdU = SU2adjointmat(U)
 x = U(1,1);
 y = U(1,2);
 
