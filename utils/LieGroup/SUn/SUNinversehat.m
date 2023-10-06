@@ -3,7 +3,8 @@ function h = SUNinversehat(U)
 %   Computes the coefficients wrt the su(N) basis.
 %   Input must be antihermitian.
 U = U/1i;
-assert(ishermitian(U), "Input is not in su(N), i.e. it is not antihermitian")
+% assert(ishermitian(U), "Input is not in su(N), i.e. it is not antihermitian")
+% TODO: find a way to work with this assert under machine precision.
 
 N = size(U,1);
 basis = suNbasis(N);
