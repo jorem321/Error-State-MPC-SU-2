@@ -1,4 +1,4 @@
-function basis = suNbasis(N)
+function basis = basis_su(N)
 %Computes an orthonormal basis for the su(N) Lie Algebra.
 %   Follows the conventions in the following book:
 %   Pfeifer, W., & Pfeifer, W. (2003). The Lie algebras su (N). Birkhäuser Basel.

@@ -1,11 +1,14 @@
-function [x, y, z] = QubitToBlochBall(X)
-%QUBITTOBLOCHBALL Implements the Bloch Ball transformation. 
-%   x is a collection of unit vectors in C^2 (Nx2 matrix)
+function [x, y, z] = su2_to_bloch_ball(X)
+%SU2_TO_BLOCH_BALL Implements the Bloch Ball visualization. 
+%   x is a collection of SU2 matrices (2x2xN matrix)
 %   The output is in Cartesian coordinates.
 
+% Get column vectors, reshape as Nx2
+columns = reshape(X(:,1,:), 2, []).';
+
 % Obtain polar forms
-phase = angle(X);
-r = abs(X(:,1)); % First component is enough
+phase = angle(columns);
+r = abs(columns(:,1)); % First component is enough
 
 % Compute spherical angles
 phi = phase(:,2)-phase(:,1);

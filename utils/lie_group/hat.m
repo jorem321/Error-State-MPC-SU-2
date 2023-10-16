@@ -1,12 +1,10 @@
-function matrix = SUNhat(h)
+function matrix = hat(h)
 %SUNHAT Map an R^(N^2-1) vector h to the Lie Algebra su(N)
 %   The mapping uses the ordered basis defined by suNbasis.m
 
-dim = size(h,2);
-N = sqrt(dim+1);
-assert(mod(N,1)==0, "Dimension of h must be of the form N^2-1")
+[dim,N] = get_dimensions(h);
 
-basis = suNbasis(N);
+basis = basis_su(N);
 matrix = zeros(N,N);
 
 for k=1:dim

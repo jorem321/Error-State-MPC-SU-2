@@ -1,12 +1,10 @@
-function ad = suNadjoint(h)
+function ad = lie_adjoint(h)
 %SUNADJOINT Compute the adjoint in the Lie algebra wrt the hat isomorphism.
 %   (ad_h)_{lk} = -1/2 \sum_j h_j \Tr([\sigma_j, \sigma_k] \sigma_l)
 
-dim = size(h,2);
-N = sqrt(dim+1);
-assert(mod(N,1)==0, "Dimension of h must be of the form N^2-1")
+[dim,N] = get_dimensions(h);
 
-basis = suNbasis(N);
+basis = basis_su(N);
 
 % First, compute the internal commutator
 

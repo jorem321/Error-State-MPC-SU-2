@@ -1,4 +1,4 @@
-function h = SUNinversehat(U)
+function h = inverse_hat(U)
 %SUNINVERSEHAT Computes inverse hat in SUN.
 %   Computes the coefficients wrt the su(N) basis.
 %   Input must be antihermitian.
@@ -7,7 +7,7 @@ U = U/1i;
 % TODO: find a way to work with this assert under machine precision.
 
 N = size(U,1);
-basis = suNbasis(N);
+basis = basis_su(N);
 dim = size(basis,3);
 h = zeros(1,dim);
 
